@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "nduy",
+  "password": "1234"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "nduy",
+  "password": "1234"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhmNmNjY2Y5YjI0ODA2MDg5YjU2MzMiLCJpYXQiOjE2MjAxODM5OTV9.OlLDDfj62q6HBFBC8ya8qD56x472Jo3IVQZ70TVR9Us
+
+{
+  "title": "React",
+  "description": "react hooks",
+  "url": "react.com"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdjM2ZlMDk2NjQwMzBhYTRlYmVmZDAiLCJpYXQiOjE2MTg3NTU1NTJ9.H16zHhHDiJD5yaQX6qFP0VorS4OLfus1iRf6Bv6ZmCQ
+
+###
+PUT http://localhost:5000/api/posts/607c49959e5eb41414bc54b2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdjM2ZlMDk2NjQwMzBhYTRlYmVmZDAiLCJpYXQiOjE2MTg3NTU1NTJ9.H16zHhHDiJD5yaQX6qFP0VorS4OLfus1iRf6Bv6ZmCQ
+
+{
+  "title": "my updated lesson Lazada",
+  "description": "Lazada",
+  "url": "Lazada.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/607c49959e5eb41414bc54b2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdjM2ZlMDk2NjQwMzBhYTRlYmVmZDAiLCJpYXQiOjE2MTg3NTU1NTJ9.H16zHhHDiJD5yaQX6qFP0VorS4OLfus1iRf6Bv6ZmCQ
